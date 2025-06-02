@@ -20,7 +20,7 @@ steps:
 
 - script: |
     set -e
-    npm install
+    npm install --legacy-peer-deps
     npm run build
   displayName: 'Install dependencies and build React app'
 
