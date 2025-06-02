@@ -7,16 +7,28 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.9.0",
+    "bootstrap": "^5.3.6",
+    "env-cmd": "^10.1.0",
+    "i18next": "^25.2.1",
+    "i18next-browser-languagedetector": "^8.1.0",
+    "prop-types": "^15.8.1",
     "react": "^19.1.0",
+    "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
+    "react-i18next": "^15.5.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start:qa": "env-cmd -f .env.qa react-scripts start",
+    "start:staging": "env-cmd -f .env.staging react-scripts start",
+    "start:dev": "env-cmd -f .env.development react-scripts start",
+    "build:qa": "env-cmd -f .env.qa react-scripts build",
+    "build:staging": "env-cmd -f .env.staging react-scripts build",
+    "build:prod": "env-cmd -f .env.production react-scripts build",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": [
@@ -35,5 +47,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "ajv": "^7.2.4",
+    "cross-env": "^7.0.3",
+    "typescript": "^5.8.3"
   }
 }
