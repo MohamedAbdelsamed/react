@@ -19,6 +19,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    set -e
     npm install
     npm run build
   displayName: 'Install dependencies and build React app'
@@ -27,3 +28,5 @@ steps:
   inputs:
     PathtoPublish: 'build'
     ArtifactName: 'react-build'
+    publishLocation: 'Container'
+  displayName: 'Publish Build Artifacts'
