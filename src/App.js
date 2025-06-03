@@ -8,7 +8,7 @@ import ProductsList from './Components/ProductList'
 
 
 function App() {
-  console.log("hello,")
+  console.log("hello")
    const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
